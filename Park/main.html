@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>박</title>
+  <link rel="icon" href="content/park.png"/>
+  <style>
+    body {
+      background-color: white;
+    }
+
+    #park {
+      font-size: 300px;
+      text-align: center;
+      margin-top: 200px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="park">박</div>
+
+  <script>
+    var parkElement = document.getElementById('park');
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    parkElement.addEventListener('click', function() {
+      var randomColor = getRandomColor();
+      document.body.style.backgroundColor = randomColor;
+    });
+  </script>
+</body>
+</html>
